@@ -15,6 +15,7 @@ public class Test_ShoppingSummary
 {
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
+    static final String EOL = System.getProperty( "line.separator" );
     
     @Before
     public void setUpStreams() 
@@ -41,8 +42,8 @@ public class Test_ShoppingSummary
         summary.total = 3.1;
         summary.displayTo( System.out );
         
-        assertEquals("Subtotal: £3.10 (No offers available)\r\n" +
-"Total: £3.10\r\n", outContent.toString());
+        assertEquals("Subtotal: £3.10 (No offers available)" + EOL +
+"Total: £3.10" + EOL, outContent.toString());
     }
 
     @Test
@@ -65,9 +66,9 @@ public class Test_ShoppingSummary
         
         summary.displayTo( System.out );
         
-        assertEquals("Subtotal: £3.10\r\n" +
-"Apples 10% off: 10p\r\n" +
-"Total: £3.00\r\n", outContent.toString());
+        assertEquals("Subtotal: £3.10" + EOL +
+"Apples 10% off: 10p" + EOL +
+"Total: £3.00" + EOL, outContent.toString());
     }
     
     @Test
@@ -98,9 +99,9 @@ public class Test_ShoppingSummary
         
         summary.displayTo( System.out );
         
-        assertEquals("Subtotal: £4.40\r\n" +
-"Apples 10% off: 10p\r\n" +
-"Bread Buy2GetHalf off: 40p\r\n" +
-"Total: £3.90\r\n", outContent.toString());
+        assertEquals("Subtotal: £4.40" + EOL +
+"Apples 10% off: 10p" + EOL +
+"Bread Buy2GetHalf off: 40p" + EOL +
+"Total: £3.90" + EOL, outContent.toString());
     }
 }

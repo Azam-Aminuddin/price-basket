@@ -15,6 +15,7 @@ public class Test_SampleDatastore_ReadConf
 {
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
+    static final String EOL = System.getProperty( "line.separator" );
     
     @Before
     public void setUpStreams() 
@@ -42,6 +43,6 @@ public class Test_SampleDatastore_ReadConf
         final String filename = "conf/store1.conf";
         
         SampleDatastore.Instance.readConfig( "conf/store1.conf" );
-        assertEquals("Could not load file configuration " + filename + ".\r\n", errContent.toString());
+        assertEquals("Could not load file configuration " + filename + "." + EOL, errContent.toString());
     }
 }

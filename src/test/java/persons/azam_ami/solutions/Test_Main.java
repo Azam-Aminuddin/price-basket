@@ -15,8 +15,8 @@ public class Test_Main
 {
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
+    static final String EOL = System.getProperty( "line.separator" );
     
-	
     @Before
     public void setUpStreams() 
     {
@@ -44,9 +44,9 @@ public class Test_Main
             };
         
         Main.main( args );
-        assertEquals("Subtotal: £3.10\r\n" +
-"Apples 10% off: 10p\r\n" +
-"Total: £3.00\r\n", outContent.toString());
+        assertEquals("Subtotal: £3.10" + EOL +
+"Apples 10% off: 10p" + EOL +
+"Total: £3.00" + EOL, outContent.toString());
     }
 
 }

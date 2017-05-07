@@ -16,6 +16,7 @@ public class Test_Main
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
     
+	
     @Before
     public void setUpStreams() 
     {

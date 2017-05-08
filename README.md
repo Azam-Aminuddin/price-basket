@@ -13,8 +13,9 @@ This application have following features:
 ### Execution
 This application are executed via command prompt/terminal command with following syntax:  
 <pre>PriceBasket Item1 Item2 Item3 ... ItemN</pre> 
-An item name could appear once or more.
+An item name could appear more than once.
 
+### Configuration File
 Default conf file is **conf/store.conf**.We could configure location of conf file with following syntax:
 <pre>PriceBasket conf=path-to-conf Item1 Item2 Item3 ... ItemN</pre>
 
@@ -35,7 +36,7 @@ Available offers are:
 - Apples have a 10% discount off their normal price this week 
 - Buy 2 tins of soup and get a loaf of bread for half price 
  
-#### Store.conf
+#### Configuration File( conf/store.conf )
 The conf file contains following:
 <pre>
 # Items
